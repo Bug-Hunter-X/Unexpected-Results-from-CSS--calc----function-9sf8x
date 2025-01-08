@@ -1,0 +1,16 @@
+The solution involves ensuring consistent units within the `calc()` function. If the calculation involves multiple operations, use parentheses to control the order of operations:
+
+```css
+/* Incorrect: Inconsistent units */
+width: calc(100% - 50); /* 50 what? pixels? */
+
+/* Correct: Consistent units */
+width: calc(100% - 50px);
+
+/* Incorrect: Order of operations */
+width: calc(100% - 50px + 20%);
+
+/* Correct: Order of operations using parenthesis */
+width: calc(100% - (50px + 20%));
+```
+This ensures accurate and predictable calculations within the `calc()` function.
